@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobNest - Conectamos prestadores de servicios con clientes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="multimedia/Logo.jpeg" type="image/x-icon"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glassmorphism-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#hero-section">
+                <img src="multimedia/Logo.jpeg" alt="JobNest Logo" class="d-inline-block align-text-top me-2" style="width: 50px; height: auto;">
+                <span class="fw-bold">JobNest</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               
+                <div class="d-flex">
+                    <a class="custom-btn login-btn ms-lg-2" href="login.html">Iniciar sesión</a>
+                    <a class="custom-btn register-btn ms-lg-2" href="registro.html">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center text-white" id="hero-section">
+        <div class="container">
+            <!-- Logo grande centrado -->
+            <div class="mb-4">
+                <img src="multimedia/Logo.jpeg" alt="JobNest Logo" class="hero-logo" style="width: 150px; height: auto;">
+            </div>
+            <h1 class="display-3 fw-bold mb-3 glassmorphism-text">Conectamos trabajo con oportunidad</h1>
+            <p class="lead mb-4 glassmorphism-text">Encuentra los mejores prestadores de servicios o ofrece tus habilidades profesionales</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="registro.html" class="btn btn-primary btn-lg px-4">
+                            <i class="bi bi-person-plus me-2"></i>Quiero ofrecer servicios
+                        </a>
+                        <a href="registro.html" class="btn btn-outline-light btn-lg px-4">
+                            <i class="bi bi-search me-2"></i>Buscar servicios
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-white-50">¿Ya tienes cuenta? <a href="login.html" class="text-white fw-bold">Inicia sesión aquí</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="how-it-works py-5" id="how-it-works-section">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold text-dark">Así de fácil funciona JobNest</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-6 col-lg-3 d-flex">
+                    <div class="card glassmorphism-card text-center p-3 flex-fill">
+                        <div class="card-body">
+                            <i class="bi bi-person-plus-fill how-it-works-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">1. Regístrate</h5>
+                            <p class="card-text text-dark">Crea tu cuenta como prestador o cliente en minutos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex">
+                    <div class="card glassmorphism-card text-center p-3 flex-fill">
+                        <div class="card-body">
+                            <i class="bi bi-file-earmark-person how-it-works-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">2. Completa tu perfil</h5>
+                            <p class="card-text text-dark">Prestadores: muestra tus habilidades. Clientes: describe tus necesidades.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex">
+                    <div class="card glassmorphism-card text-center p-3 flex-fill">
+                        <div class="card-body">
+                            <i class="bi bi-search-heart how-it-works-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">3. Conecta</h5>
+                            <p class="card-text text-dark">Encuentra el match perfecto entre servicios y necesidades.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex">
+                    <div class="card glassmorphism-card text-center p-3 flex-fill">
+                        <div class="card-body">
+                            <i class="bi bi-handshake how-it-works-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">4. Trabaja juntos</h5>
+                            <p class="card-text text-dark">Acuerda términos y comienza a colaborar de manera segura.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section py-5 bg-light" id="services-section">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold text-dark">Servicios Populares</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card glassmorphism-card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-tools services-icon mb-3"></i>
+                            <h5 class="card-title">Servicios Técnicos</h5>
+                            <p class="card-text text-dark">Plomería, electricidad, carpintería y reparaciones generales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card glassmorphism-card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-laptop services-icon mb-3"></i>
+                            <h5 class="card-title">Tecnología</h5>
+                            <p class="card-text text-dark">Desarrollo web, diseño gráfico, marketing digital y soporte técnico.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card glassmorphism-card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-house-check services-icon mb-3"></i>
+                            <h5 class="card-title">Hogar</h5>
+                            <p class="card-text text-dark">Limpieza, jardinería, mudanzas y organización de espacios.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card glassmorphism-card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-book services-icon mb-3"></i>
+                            <h5 class="card-title">Educación</h5>
+                            <p class="card-text text-dark">Clases particulares, tutorías, cursos y asesorías académicas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card glassmorphism-card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-heart-pulse services-icon mb-3"></i>
+                            <h5 class="card-title">Bienestar</h5>
+                            <p class="card-text text-dark">Entrenadores personales, nutricionistas, masajes y cuidado personal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card glassmorphism-card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-camera services-icon mb-3"></i>
+                            <h5 class="card-title">Eventos</h5>
+                            <p class="card-text text-dark">Fotografía, catering, música en vivo y organización de eventos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="registro.html" class="btn btn-outline-primary btn-lg">Explorar todos los servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section py-5" id="benefits-section">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold text-dark">¿Por qué elegir JobNest?</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="card glassmorphism-card text-center p-4 flex-fill">
+                        <div class="card-body">
+                            <i class="bi bi-shield-check benefits-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">Perfiles Verificados</h5>
+                            <p class="card-text text-dark">Todos nuestros prestadores pasan por un proceso de verificación para tu seguridad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="card glassmorphism-card text-center p-4 flex-fill">
+                        <div class="card-body">
+                            <i class="bi bi-star-fill benefits-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">Sistema de Calificaciones</h5>
+                            <p class="card-text text-dark">Evalúa y lee reseñas reales de otros clientes antes de contratar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="card glassmorphism-card text-center p-4 flex-fill">
+                        <div class="card-body">
+                            <i class="bi bi-currency-dollar benefits-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">Precios Transparentes</h5>
+                            <p class="card-text text-dark">Cotizaciones claras sin sorpresas. Sabrás el costo desde el inicio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="card glassmorphism-card text-center p-4 flex-fill">
+                        <div class="card-body">
+                            <i class="bi bi-chat-dots benefits-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">Comunicación Directa</h5>
+                            <p class="card-text text-dark">Habla directamente con los prestadores para acordar todos los detalles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="card glassmorphism-card text-center p-4 flex-fill">
+                        <div class="card-body">
+                            <i class="bi bi-clock-history benefits-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">Disponibilidad 24/7</h5>
+                            <p class="card-text text-dark">Encuentra y contrata servicios en el momento que lo necesites.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="card glassmorphism-card text-center p-4 flex-fill">
+                        <div class="card-body">
+                            <i class="bi bi-award benefits-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">Calidad Garantizada</h5>
+                            <p class="card-text text-dark">Trabajamos con los mejores profesionales en cada categoría.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials py-5 bg-light" id="testimonials-section">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold text-dark">Lo que dicen nuestra comunidad</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card glassmorphism-card p-4 h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="multimedia/user.jpg" alt="Cliente" class="rounded-circle me-3" style="width: 60px; height: 60px;">
+                                <div>
+                                    <h5 class="card-title mb-0 text-dark">María González</h5>
+                                    <p class="card-subtitle text-muted">Cliente satisfecha</p>
+                                </div>
+                            </div>
+                            <p class="fst-italic text-dark">"Encontré un excelente plomero en menos de una hora. El servicio fue rápido, profesional y a un precio justo. ¡Totalmente recomendado!"</p>
+                            <div class="text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card glassmorphism-card p-4 h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="multimedia/user.jpg" alt="Prestador" class="rounded-circle me-3" style="width: 60px; height: 60px;">
+                                <div>
+                                    <h5 class="card-title mb-0 text-dark">Carlos Rodríguez</h5>
+                                    <p class="card-subtitle text-muted">Prestador de servicios</p>
+                                </div>
+                            </div>
+                            <p class="fst-italic text-dark">"JobNest me ha permitido hacer crecer mi negocio de reparaciones. Ahora tengo clientes constantes y puedo mostrar mi trabajo con reseñas reales."</p>
+                            <div class="text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section py-5 text-white text-center">
+        <div class="container">
+            <h2 class="display-5 fw-bold mb-4">¿Listo para empezar?</h2>
+            <p class="lead mb-4">Únete a nuestra comunidad de prestadores y clientes</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="registro.html" class="btn btn-light btn-lg px-4">
+                    <i class="bi bi-person-plus me-2"></i>Registrarme como Prestador
+                </a>
+                <a href="registro.html" class="btn btn-outline-light btn-lg px-4">
+                    <i class="bi bi-search me-2"></i>Buscar Servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>

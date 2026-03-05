@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="multimedia/Logo.jpeg" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+
+    <!-- Loader de pantalla completa -->
+    <div id="loader" class="loader-container">
+        <div class="loader-content">
+            <img src="multimedia/Logo.jpeg" alt="cargando..." class="loader-logo">
+            <p class="mt-3">Registrando...</p>
+        </div>
+    </div>
+
+    <!-- Alerta personalizada glassmorphism -->
+    <div id="customAlert" class="custom-alert-container">
+        <div class="custom-alert-box">
+            <p id="customAlertMessage"></p>
+            <button id="customAlertClose" class="btn btn-primary">aceptar</button>
+        </div>
+    </div>
+
+    <div class="register-container">
+        
+
+        <div class="form-column">
+            <div class="top-bar">
+                <a href="index.html" class="back-link">
+                    <i class="bi bi-arrow-left-circle-fill"></i> Regresar
+                </a>
+                <img src="multimedia/Logo.jpeg" alt="logo tubolsadetrabajo" style="width: 60px; height: auto;">
+            </div>
+
+            <div class="register-box">
+                <h2>Registrarse</h2>
+                <form id="registerForm" novalidate>
+                    <input type="hidden" name="userType" value="candidato"> 
+                    
+                    <div id="candidateFields" class="candidate-fields">
+                        <div class="mb-3 text-start">
+                            <label for="firstNameInput" class="form-label visually-hidden">Nombre(s)</label>
+                            <input type="text" class="form-control" id="firstNameInput" name="firstName" placeholder="Nombre(s)" maxlength="50" required>
+                            <div class="error-message" id="firstNameError"></div>
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="lastNamePInput" class="form-label visually-hidden">Apellido paterno</label>
+                            <input type="text" class="form-control" id="lastNamePInput" name="lastNameP" placeholder="Apellido paterno" maxlength="50" required>
+                            <div class="error-message" id="lastNamePError"></div>
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="lastNameMInput" class="form-label visually-hidden">Apellido materno</label>
+                            <input type="text" class="form-control" id="lastNameMInput" name="lastNameM" placeholder="Apellido materno" maxlength="50" required>
+                            <div class="error-message" id="lastNameMError"></div>
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="candidatePhoneInput" class="form-label visually-hidden">Número de teléfono</label>
+                            <input type="text" class="form-control" id="candidatePhoneInput" name="candidatePhone" placeholder="Número de teléfono (opcional)" maxlength="20">
+                            <div class="error-message" id="candidatePhoneError"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 text-start">
+                        <label for="userType" class="form-label">Tipo de cuenta</label>
+                        <select class="form-select" id="userType" name="userType" required>
+                            <option value="" disabled selected>Selecciona tu tipo de cuenta</option>
+                            <option value="prestador">Prestador de servicios</option>
+                            <option value="cliente">Cliente</option>
+                        </select>
+                        <div class="error-message" id="userTypeError"></div>
+                    </div>
+
+                    <div class="mb-3 text-start">
+                        <label for="emailInput" class="form-label visually-hidden">Correo electrónico</label>
+                        <input type="email" class="form-control" id="emailInput" name="email" placeholder="Correo electrónico" required>
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    
+                    <div class="mb-3 text-start">
+                        <label for="passwordInput" class="form-label visually-hidden">Contraseña</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="passwordInput" name="password" placeholder="Contraseña" required>
+                            <button class="btn btn-outline-secondary toggle-password" type="button" id="togglePassword">
+                                <i class="bi bi-eye-fill"></i>
+                            </button>
+                        </div>
+                        <div class="error-message" id="passwordError"></div>
+                    </div>
+                    
+                    <div class="mb-3 text-start">
+                        <label for="confirmPasswordInput" class="form-label visually-hidden">Confirmar contraseña</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="confirmPasswordInput" name="confirmPassword" placeholder="Confirmar contraseña" required>
+                            <button class="btn btn-outline-secondary toggle-password" type="button" id="toggleConfirmPassword">
+                                <i class="bi bi-eye-fill"></i>
+                            </button>
+                        </div>
+                        <div class="error-message" id="confirmPasswordError"></div>
+                    </div>
+
+
+                    <div class="mb-3 form-check text-start">
+                        <input type="checkbox" class="form-check-input" id="termsCheck" name="termsCheck" required>
+                        <label class="form-check-label text-muted" for="termsCheck">Acepto los <a href="#" class="text-primary">términos y condiciones</a></label>
+                        <div class="error-message" id="termsError"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                    <p class="mt-4 text-muted">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="js/registro.js"></script>
+
+</body>
+</html>

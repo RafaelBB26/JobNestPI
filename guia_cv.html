@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía para CV Impactante</title>
+    <link rel="icon" href="multimedia/logo_BT.ico" type="image/x-icon"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/dashboard.css" rel="stylesheet"> </head>
+<body class="loader_bg">
+    <div class="loader_p">
+        <div class="loader">
+            <span class="loader-text">Cargando</span>
+            <span class="load"></span>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container-fluid px-4">
+            <button class="btn btn-glass d-lg-none me-3" id="sidebarToggle" aria-label="toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <img src="multimedia/logo_BT.png" alt="logo bolsa de trabajo" class="me-2" width="40" height="40">
+            
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-glass" id="themeToggle" aria-label="toggle theme">
+                    <i class="bi bi-sun-fill" id="themeIcon"></i>
+                </button>
+                
+                <div class="position-relative">
+                    <button class="btn btn-glass position-relative" id="notificationBtn" aria-expanded="false" aria-controls="notificationDropdown">
+                        <i class="bi bi-bell"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                    </button>
+                    
+                    <div class="notification-dropdown glass-panel" id="notificationDropdown">
+                        <div class="p-3">
+                            <h6 class="mb-3">Notificaciones</h6>
+                            <div class="notification-item">
+                                <i class="bi bi-check-circle text-success"></i>
+                                <div>
+                                    <small class="text-muted">Hace 2 min</small>
+                                    <p class="mb-0">¡Felicidades! tienes una nueva oferta de empleo.</p>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <i class="bi bi-exclamation-triangle text-warning"></i>
+                                <div>
+                                    <small class="text-muted">Hace 1 hora</small>
+                                    <p class="mb-0">Tu cv necesita actualización para más oportunidades.</p>
+                                </div>
+                            </div>
+                            <div class="notification-item">
+                                <i class="bi bi-info-circle text-primary"></i>
+                                <div>
+                                    <small class="text-muted">Hace 3 horas</small>
+                                    <p class="mb-0">Nueva feria de empleo virtual disponible.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="position-relative">
+                    <button class="btn btn-glass d-flex align-items-center" id="userBtn" aria-expanded="false" aria-controls="userDropdown">
+                        <span class="d-none d-md-inline" id="navbarUserName">Cargando...</span>
+                    </button>
+                    
+                    <div class="user-dropdown glass-panel" id="userDropdown">
+                        <div class="p-3">
+                            <div class="text-center mb-3">
+                                <h6 class="mb-1" id="dropdownUserName">Cargando...</h6>
+                                <small class="mb-1" id="dropdownUserEmail">Cargando...</small>
+                            </div>
+                            <hr>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-outline-primary btn-sm" data-section="perfil">
+                                    <i class="bi bi-person me-2"></i>Mi perfil
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar glass-sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html" data-section="inicio">
+                        <i class="bi bi-house-door"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html#empleos-section" data-section="empleos">
+                        <i class="bi bi-search"></i>
+                        <span>Empleos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" data-section="recursos">
+                        <i class="bi bi-book"></i>
+                        <span>Consejos y recursos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html#perfil-section" data-section="perfil">
+                        <i class="bi bi-person"></i>
+                        <span>Mi perfil</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="sidebar-footer">
+            <button class="btn btn-outline-danger w-100" id="logoutBtn">
+                <i class="bi bi-box-arrow-right me-2"></i>
+                Cerrar sesión
+            </button>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <section class="content-section">
+            <div class="glass-section-content">
+                <div class="container-fluid">
+                    <h2 class="mb-3 titulo-dashboard">Cómo crear un CV impactante</h2>
+                    <p>Aquí puedes agregar el contenido de tu guía para crear un CV impactante.</p>
+                    <p>Por ejemplo, secciones sobre:</p>
+                    <ul>
+                        <li>Importancia de un buen CV</li>
+                        <li>Elementos clave de un CV</li>
+                        <li>Errores comunes a evitar</li>
+                        <li>Consejos de formato y diseño</li>
+                    </ul>
+                    <a href="dashboard.html#recursos-section" class="btn btn-secondary mt-3">Volver a Consejos y Recursos</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="logoutModalLabel">Cerrar sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro de que deseas cerrar sesión?</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="confirmLogout">Cerrar sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-alert-overlay" id="customAlertOverlay">
+        <div class="custom-alert glass-modal" id="customAlert">
+            <div class="modal-body text-center">
+                <p id="customAlertMessage"></p>
+                <button type="button" class="btn btn-primary mt-3" id="customAlertClose">Ok</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/dashboard.js"></script> </body>
+</html>
