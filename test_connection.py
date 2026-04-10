@@ -3,10 +3,10 @@ import pyodbc
 def test_connection_mac():
     DB_CONFIG = {
         'driver': '{ODBC Driver 18 for SQL Server}', 
-        'server': 'localhost,1433',
+        'server': 'localhost,1433',  
         'database': 'JobNest',
-        'user': 'SA',  # Usuario por defecto de SQL Server en Docker
-        'password': 'E322158b@',  # Cambia por tu contraseña real
+        'user': 'sa',  # Usuario por defecto de SQL Server en Docker
+        'password': 'Cruzazul97.',  # Cambia por tu contraseña real
         'trust_server_certificate': 'yes'
     }
     
