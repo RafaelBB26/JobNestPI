@@ -1,17 +1,21 @@
 services:
   web:
     build: .
+    container_name: jobnest-web
     ports:
       - "80:5000"
     depends_on:
       - db
-    restart: always
 
   db:
-    image: mysql:8.0
+    image: mysql:8
+    container_name: jobnest-db
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: jobnest
+    ports:
+      - "3307:3306"
     volumes:
       - db_data:/var/lib/mysql
 
