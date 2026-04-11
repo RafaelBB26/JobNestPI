@@ -1,24 +1,28 @@
-name: CI/CD JobNestPI
+name: Deploy to EC2
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clonar repositorio
+    - name: Checkout código
       uses: actions/checkout@v3
 
-    - name: Configurar Python
-      uses: actions/setup-python@v4
+    - name: Conectar a EC2 y desplegar
+      uses: appleboy/ssh-action@v0.1.6
       with:
-        python-version: '3.10'
-
-    - name: Instalar dependencias
-      run: pip install -r requirements.txt
-
-    - name: Build Docker
-      run: docker build -t jobnestpi-app .
+        host: 3.144.234.15
+        username: ubuntu
+        key: ${{ secrets.EC2_KEY }}
+        script: |
+          cd JobNestPI
+          git pull origin main
+          docker stop jobnest || true
+          docker rm jobnest || true
+          docker build -t jobnest-app .
+          docker run -d -p 5000:5000 --name jobnest jobnest-app
