@@ -1,29 +1,28 @@
 name: Deploy to EC2
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
 
 jobs:
   deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}  # 🔥 CLAVE
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout código
-      uses: actions/checkout@v3
-
-    - name: Conectar a EC2 y desplegar
-      uses: appleboy/ssh-action@v0.1.6
-      with:
-        host: 3.144.234.15
-        username: ubuntu
-        key: ${{ secrets.EC2_KEY }}
-        script: |
-          cd JobNestPI || git clone https://github.com/RafaelBB26/JobNestPI.git
-          cd JobNestPI
-          git pull origin main
-          docker stop jobnest || true
-          docker rm jobnest || true
-          docker build -t jobnest-app .
-          docker run -d -p 80:5000 --name jobnest jobnest-app
+      - name: Conectar a EC2 y desplegar
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: 3.144.234.15
+          username: ubuntu
+          key: ${{ secrets.EC2_KEY }}
+          script: |
+            cd JobNestPI || git clone https://github.com/RafaelBB26/JobNestPI.git
+            cd JobNestPI
+            git pull origin main
+            docker stop jobnest || true
+            docker rm jobnest || true
+            docker build -t jobnest-app .
+            docker run -d -p 80:5000 --name jobnest jobnest-app
